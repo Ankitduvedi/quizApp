@@ -20,7 +20,7 @@ class AnswerButton extends StatelessWidget {
           backgroundColor: Colors.deepPurple,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(40),
+            borderRadius: BorderRadius.circular(30),
           )),
       child: Text(answerText),
     );
