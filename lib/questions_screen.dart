@@ -15,7 +15,9 @@ class _QuestionScreenState extends State<QuestionsScreen> {
 
   void answerQuestion() {
     //to execute build method again you have to add a set state function.
-    currentQuestionIndex++;
+    setState(() {
+      currentQuestionIndex++;
+    });
   }
 
   @override
@@ -36,7 +38,10 @@ class _QuestionScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 30),
             ...currentQuestion.getShuffledAnswers().map((answer) {
-              return AnswerButton(answerText: answer, onTap: () {});
+              return AnswerButton(
+                answerText: answer,
+                onTap: answerQuestion,
+              );
             })
           ],
         ),
